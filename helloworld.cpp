@@ -89,10 +89,14 @@ int main(){
   string s2=s1;//string s2(s1);
   string s3="hello";//string s3("hello");
   string s4(10,'c');//string s4=string(10,'c');
-  */
-  
   std::string s="";
   std::cin>>s;
   std::cout<<" "<<s<<std::endl;
+  */
+
+  std::string word;
+  while(getline(std::cin,word)){
+    std::cout<<word<<std::endl;
+  }
 return 0;
 }
