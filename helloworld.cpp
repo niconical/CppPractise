@@ -1,4 +1,6 @@
 #include<iostream>
+#include<string>
+//struct foo
 //int i=100;
 int main(){
   //remind users to enter two numbers
@@ -67,7 +69,6 @@ int main(){
   std::cout<<" ci is "<<ci<<std::endl;
   i=100;
   std::cout<<" ci is "<<ci<<std::endl;
-  */
   int a=10;
   int &ca=a;
   const int &cb=a;
@@ -77,7 +78,21 @@ int main(){
   int *const curErrnum=&errnum;
   const double pi=3,14159;
   const double *const pip=&pi; 
-
-return 0;
+  decltype(f()) sum=x;
+  struct Sales_data{
+    std::string bookNo;
+    unsigned units_sold=0;
+    double revenue=0.0
+      };
+  Sales_data accum,trans,*salesptr;
+  string s1;
+  string s2=s1;//string s2(s1);
+  string s3="hello";//string s3("hello");
+  string s4(10,'c');//string s4=string(10,'c');
+  */
   
+  std::string s="";
+  std::cin>>s;
+  std::cout<<" "<<s<<std::endl;
+return 0;
 }
