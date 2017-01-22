@@ -1,5 +1,15 @@
 #include<iostream>
 #include<string>
+#include<vector>
+
+//using namespace std;
+using std::cin;
+using std::cout;
+using std::vector;
+using std::string;
+using std::endl;
+
+
 //struct foo
 //int i=100;
 int main(){
@@ -92,11 +102,90 @@ int main(){
   std::string s="";
   std::cin>>s;
   std::cout<<" "<<s<<std::endl;
-  */
-
   std::string word;
   while(getline(std::cin,word)){
     std::cout<<word<<std::endl;
   }
+  std::string str="xiamengmeng";
+  for(auto c:str){
+    std::cout<<c<<std::endl;
+  }
+  std::string s="helloworld!!!";
+  decltype(s.size()) punct_cnt=0;
+  for(auto c:s)
+    if(ispunct(c))
+      ++punct_cnt;
+  std::cout<<punct_cnt
+	   <<" punctuation characters in "<<s<<std::endl;
+  std::string s;
+  while(std::cin>>s){
+    for(auto &c:s)
+      if(ispunct(c))
+	c=' ';
+  }
+  std::cout<<s<<std::endl;
+  */
+  /*
+  vector<T> v1;
+  vector<T> v2(v1);
+  vector<T> v2=v1;
+  vector<T> v3(n,val);
+  vector<T> v4(n);
+  vector<T> v5{a,b,c,...}
+  vector<T> v5={a,b,c,...}
+
+  vector<string> svec;
+  vector<int> ivec(10);
+  vector<string> svec(10);
+
+  vector<int> v1(10);
+  vector<int> v2{10};
+
+  vector<int> v3(10,1);
+  vector<int> v4{10,1};
+
+  vector<string> v5{"hi"};
+  vector<string> v6("hi");//eror
+  vector<string> v7{10};
+  vector<string> v8{10,"hi"};
+  */
+  /*
+  string s="hello world";
+  if(s.begin()!=s.end()){
+    auto it=s.begin();
+    *it=toupper(*it);
+  }
+  cout<<s<<endl;
+  string s="aBBB";
+  if(s.begin()!=s.end()){
+    auto it=s.begin();
+    *it=toupper(*it);
+  }
+
+  string s="hello world!";
+  for(auto i=s.begin();i!=s.end() && !isspace(*i);i++){
+    *i=toupper(*i);
+  }
+  cout<<s<<endl;
+  */
+  /*
+  vector<int>::iterator it;
+  string::iterator it2;
+  vector<int>::const_iterator it3;
+  string::const_iterator it4;
+  */
+
+  auto beg=text.begin(),end=text.end();
+  auto mid=text.begin()+(end-beg)/2;
+  while(mid!=end && *mid!=sought){
+    if(sought<*mid){
+      end=mid;
+    }
+    if(sought>*mid){
+      beg=mid+1;
+    }
+    mid=beg+(end-beg)/2;
+  }
+  
 return 0;
 }
