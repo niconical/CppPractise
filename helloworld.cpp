@@ -1,4 +1,5 @@
 #include<iostream>
+//int i=100;
 int main(){
   //remind users to enter two numbers
 
@@ -44,10 +45,39 @@ int main(){
   std::cout<<sum<<std::endl;
   */
 
-  int sum=0;int value=0;
+  /*int sum=0;int value=0;
   while(std::cin>>value)
     sum+=value;
   std::cout<<sum<<std::endl;
+  */
+  /*int i=100;
+  int j=i;
+  std::cout<<j;
+  int i,&ri=i;
+  i=5;ri=10;
+  std::cout<<i<<" "<<ri<<std::endl;
+  int i=10;
+  int j=11;
+  int &ri=i;
+  std::cout<<ri<<std::endl;
+  ri=j;
+  std::cout<<ri<<std::endl;
+  int i=10;
+  const int ci=i;
+  std::cout<<" ci is "<<ci<<std::endl;
+  i=100;
+  std::cout<<" ci is "<<ci<<std::endl;
+  */
+  int a=10;
+  int &ca=a;
+  const int &cb=a;
+  ca=20;
+
+  int errnum=0;
+  int *const curErrnum=&errnum;
+  const double pi=3,14159;
+  const double *const pip=&pi; 
+
+return 0;
   
-  return 0;
 }
